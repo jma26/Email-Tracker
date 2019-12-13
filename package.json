@@ -1,5 +1,5 @@
 {
-  "name": "Email Tracker",
+  "name": "email-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
-  }
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {}
 }
