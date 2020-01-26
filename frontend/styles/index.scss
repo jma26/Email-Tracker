@@ -2,14 +2,17 @@
   margin: 0;
   padding: 0;
   font-size: 100%;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 16px;
+  height: 100%;
+  width: 100%;
 }
 
 $smartphone: 767px;
-$tablet: 992px;
+$tablet: 768px;
 $desktop: 1200px;
 
 // Breakpoints
@@ -39,15 +42,29 @@ $desktop: 1200px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @include breakpoint(tablet) {
+    padding: 2rem;
+  }
 }
 
 .Home__headline {
   font-size: 2rem;
+  text-align: center;
+  @include breakpoint(tablet) {
+    font-size: 3rem;
+  }
+  @include breakpoint(desktop) {
+    font-size: 4rem;
+  }
 }
 
 .Home__subheadline {
   font-size: 1rem;
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 1rem;
+  text-align: center;
+  @include breakpoint(tablet) {
+    font-size: 1.5rem;
+  }
 }
 
 .Home__headline, .Home__subheadline {
@@ -59,9 +76,17 @@ input[type=text], input[type=submit] {
 }
 
 input[type=text] {
-  width: 60%;
+  width: 100%;
+}
+
+input[type=submit] {
+  width: 40%;
 }
 
 form {
   display: flex;
+  @include breakpoint(tablet) {
+    width: 70%;
+    margin: 0 auto;
+  }
 }
