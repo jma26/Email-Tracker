@@ -4,16 +4,64 @@
   font-size: 100%;
 }
 
+html {
+  font-size: 16px;
+}
+
+$smartphone: 767px;
+$tablet: 992px;
+$desktop: 1200px;
+
+// Breakpoints
+@mixin breakpoint($screen) {
+  @if $screen == smartphone {
+    @media only screen and (max-width: $smartphone) {
+      @content;
+    }
+  }
+  @else if $screen == tablet {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+  @else if $screen == desktop {
+    @media only screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+}
+
 .Home {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/background.jpg');
   background-size: cover;
   height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .Home__headline {
-  font-size: 4rem;
+  font-size: 2rem;
+}
+
+.Home__subheadline {
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .Home__headline, .Home__subheadline {
   color: #FFF;
+}
+
+input[type=text], input[type=submit] {
+  padding: 0.5rem;
+}
+
+input[type=text] {
+  width: 60%;
+}
+
+form {
+  display: flex;
 }
