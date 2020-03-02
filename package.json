@@ -10,13 +10,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-env": "^0.4.0",
-    "gulp-nodemon": "^2.4.2",
+    "gulp-dotenv": "^0.2.2",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-live-server": "0.0.31"
+  }
 }
